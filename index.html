@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dispador de Mensagens</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-image: url("https://cdn.wallpapersafari.com/1/80/8DYndB.png");
+        font-family: "Roboto", sans-serif;
+      }
+      div {
+        background-color: #daf7c1;
+        width: 320px;
+        margin: 8px;
+        padding: 8px 18px;
+        border-radius: 14px;
+        box-shadow: 2px 2px rgb(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      div:hover {
+        box-shadow: 4px 4px rgb(0, 0, 0, 0.4);
+        cursor: pointer;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div onclick="mandarMensagem(this)">
+      <p>Bom diaa 😜</p>
+      <img
+        src="https://i.pinimg.com/originals/d9/d9/7d/d9d97d48264770f85d35c208f279152c.png"
+      />
+    </div>
+    <div onclick="mandarMensagem(this)">
+      <p>Que loucura! 😯</p>
+      <img
+        src="https://i.pinimg.com/originals/d9/d9/7d/d9d97d48264770f85d35c208f279152c.png"
+      />
+    </div>
+    <div onclick="mandarMensagem(this)">
+      <p>Não posso falar no momento! Depois retorno.</p>
+      <img
+        src="https://i.pinimg.com/originals/d9/d9/7d/d9d97d48264770f85d35c208f279152c.png"
+      />
+    </div>
+    <div onclick="mandarMensagem(this)">
+      <p>Vamos marcar sim, a gente vai se falando👍</p>
+      <img
+        src="https://i.pinimg.com/originals/d9/d9/7d/d9d97d48264770f85d35c208f279152c.png"
+      />
+    </div>
+    <div onclick="mandarMensagem(this)">
+      <p>Saudadeeees 😏🥰</p>
+      <img
+        src="https://i.pinimg.com/originals/d9/d9/7d/d9d97d48264770f85d35c208f279152c.png"
+      />
+    </div>
+    <div onclick="mandarMensagem(this)">
+      <p>Te amoo ❤🥰😍</p>
+      <img
+        src="https://i.pinimg.com/originals/d9/d9/7d/d9d97d48264770f85d35c208f279152c.png"
+      />
+    </div>
+    <div onclick="mandarMensagem(this)">
+      <p>Beleza, amanhã a gente se fala 👍</p>
+      <img
+        src="https://i.pinimg.com/originals/d9/d9/7d/d9d97d48264770f85d35c208f279152c.png"
+      />
+    </div>
+
+    <script>
+      function mandarMensagem(elemento) {
+        let texto = elemento.firstElementChild.innerText;
+        let numero = prompt("Qual é o número?");
+        let whtas = `https://api.whatsapp.com/send?phone=55${numero}&text=${texto}`;
+
+        window.open(whtas);
+      }
+    </script>
+  </body>
+</html>
